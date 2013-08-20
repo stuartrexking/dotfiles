@@ -1,0 +1,3 @@
+. ~/Workspace/dotfiles/bash/env
+. ~/Workspace/dotfiles/bash/config
+. ~/Workspace/dotfiles/bash/aliases

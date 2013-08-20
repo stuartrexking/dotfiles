@@ -1,0 +1,31 @@
+# System
+export EDITOR="/usr/local/bin/vim -N"
+export PATH=/usr/local/bin:$PATH
+export PATH=~/bin:$PATH
+
+source ~/bin/git-completion.bash
+
+function _minutes_since_last_commit {
+    now=`date +%s`
+    last_commit=`git log --pretty=format:'%at' -1`
+    seconds=$((now-last_commit))
+    minutes=$((seconds/60))
+    echo $minutes
+}
+git_bash_output() {
+    local g="$(__gitdir)"
+    if [ -n "$g" ]; then
+        local MINUTES_SINCE_LAST_COMMIT=`_minutes_since_last_commit`
+        if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
+            local COLOR=${RED}
+        elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
+            local COLOR=${YELLOW}
+        else
+            local COLOR=${GREEN}
+        fi
+        local HASH="$(vcprompt -f %h)"
+        local SINCE_LAST_COMMIT="${COLOR}$(_minutes_since_last_commit)m${NO_COLOR}"
+        local GIT_PROMPT=`__git_ps1 "${YELLOW}%s|${HASH}|${NO_COLOR}${SINCE_LAST_COMMIT}"`
+        echo ${GIT_PROMPT}
+    fi
+}
