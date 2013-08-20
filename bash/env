@@ -4,6 +4,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
 
 source ~/bin/git-completion.bash
+source ~/bin/git-prompt.sh
 
 function _minutes_since_last_commit {
     now=`date +%s`
