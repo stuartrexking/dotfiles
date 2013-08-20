@@ -12,3 +12,4 @@ git clone https://github.com/stuartrexking/dotfiles.git ~/Workspace/dotfiles
 
 ln -s ~/Workspace/dotfiles/bash/bash_profile ~/.bash_profile
 ln -s ~/Workspace/dotfiles/bash/bashrc ~/.bashrc
+ln -s ~/Workspace/dotfiles/git/gitconfig ~/.gitconfig
