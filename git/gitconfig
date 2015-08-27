@@ -3,7 +3,7 @@
     email = stuartrexking@gmail.com
 
 [color]
-    ui = auto
+    ui = true
 
 [core]
     editor = vi

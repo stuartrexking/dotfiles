@@ -1,10 +1,23 @@
 # System
 export EDITOR="/usr/local/bin/vim -N"
-export PATH=/usr/local/bin:$PATH
-export PATH=~/bin:$PATH
+export JAVA_HOME=$(/usr/libexec/java_home)
+export WORKON_HOME=~/.envs
+export GOPATH=~/Workspace/go
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/git/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/bin/apache-maven-3.1.1/bin:$PATH"
+export PATH="$HOME/bin/packer_0.7.5_darwin_amd64:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/bin/activator-1.2.12:$PATH"
+export PATH="$HOME/bin/go_appengine:$PATH"
+
+eval "$(rbenv init -)"
 
 source ~/bin/git-completion.bash
 source ~/bin/git-prompt.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 function _minutes_since_last_commit {
     now=`date +%s`
