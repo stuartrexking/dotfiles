@@ -1,6 +1,3 @@
 . ~/.env
-. ~/.config
+. ~/.conf
 . ~/.aliases
-
-### Added by the Heroku Toolbelt
-
