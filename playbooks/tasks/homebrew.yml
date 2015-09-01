@@ -1,0 +1,61 @@
+---
+- name: Tap Homebrew repositories
+  homebrew_tap: name={{ item }} state=present
+  with_items:
+    - homebrew/binary
+    - homebrew/completions
+    - homebrew/dupes
+    - homebrew/versions
+
+- name: Update and upgrade Homebrew
+  shell: brew update && brew upgrade && brew cleanup
+
+- name: Install libraries with Homebrew
+  homebrew: name={{ item }} state=latest
+  with_items:
+    - awscli
+    - bash
+    - bash-completion
+    - cask
+    - cloc
+    - coreutils
+    - curl
+    - git
+    - gnu-sed
+    - heroku
+    - leiningen
+    - maven
+    - mercurial
+    - openssl
+    - packer
+    - postgresql
+    - protobuf
+    - pv
+    - scala
+    - ssh-copy-id
+    - subversion
+    - the_silver_searcher
+    - tig
+    - tmux
+    - tree
+    - unrar
+    - vagrant-completion
+    - vcprompt
+    - vim
+    - watch
+    - wget
+    - wireshark
+    - wrk
+    - docker-completion
+    - maven-completion
+    - packer-completion
+    - vagrant-completion
+
+- name: Install aspell with Homebrew
+  homebrew: name=aspell state=latest install_options=all
+
+- name: Install emacs with Homebrew
+  homebrew: name=emacs state=linked install_options=cocoa
+
+- name: Install openssh with Homebrew
+  homebrew: name=openssh state=latest install_options=with-keychain-support

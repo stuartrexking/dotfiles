@@ -1,0 +1,28 @@
+[alias]
+    aa = add --all
+    amend = commit --amend
+    ci = commit
+    co = checkout
+    di = diff
+    dc = diff -- cached
+    ff = merge --ff-only
+    lo = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    lop = log master..$1 --pretty=format:%s
+    pom = push origin master
+    pullff = pull --ff-only
+    st = status
+
+[color]
+    ui = true
+
+[core]
+    excludesfile = ~/.gitignore
+    editor = vi
+    autocrlf = false
+    safecrlf = true
+
+[push]
+    default=simple
+
+[include]
+    path = ~/.gitconfig.local

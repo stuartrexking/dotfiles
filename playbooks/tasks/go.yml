@@ -1,0 +1,11 @@
+---
+- name: Install Go dependencies
+  shell: go get -u -v {{ item }}
+  with_items:
+    - github.com/tools/godep
+    - github.com/golang/lint/golint
+
+
+
+
+
