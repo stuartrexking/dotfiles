@@ -4,8 +4,4 @@
   with_items:
     - github.com/tools/godep
     - github.com/golang/lint/golint
-
-
-
-
-
+    - golang.org/x/tools/cmd/goimports
