@@ -4,3 +4,4 @@
     - include: tasks/dotfiles.yml
     - include: tasks/homebrew.yml
     - include: tasks/go.yml
+    - include: tasks/emacs.yml
