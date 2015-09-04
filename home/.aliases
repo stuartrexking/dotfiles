@@ -34,6 +34,7 @@ alias r='rails'
 alias g='generate'
 alias be='bundle exec '
 alias bs='bundle exec rspec '
+alias e='emacs'
 
 function largest() {
   du -h . | grep ^[0-9.][0-9.]G;
