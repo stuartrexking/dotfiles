@@ -12,6 +12,5 @@
 cd ~
 git clone https://github.com/stuartrexking/dotfiles.git .dotfiles
 cd ~/.dotfiles
+make
 ```
-
-*This structure stolen from [Grey Beard](https://github.com/codahale/dotfiles)*
