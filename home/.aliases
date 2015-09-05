@@ -1,0 +1,3 @@
+function cdg() {
+    cd ~/Workspace/go/src
+}
