@@ -16,13 +16,6 @@ set noswapfile
 set fileformat=unix
 set fileformats=unix,dos
 
-colorscheme solarized
-set background=dark
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 let mapleader =","
-let g:CommandTWildIgnore=&wildignore . ",**/node_modules/*,**/Godeps/*"
-map <leader>f <esc>:CommandTFlush<cr>\|:CommandT<cr>
-nnoremap <leader><leader> <c-^>
-
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>T <Plug>(go-test-func)
