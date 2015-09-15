@@ -37,6 +37,7 @@
     - scala
     - ssh-copy-id
     - subversion
+	- terraform
     - the_silver_searcher
     - tig
     - tmux
