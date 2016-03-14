@@ -1,0 +1,7 @@
+# Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
+NO_COLOR='\e[0m'
+EBLACK='\e[1;30m'
+GREEN='\e[0;32m'
+RED='\e[0;31m'
+YELLOW='\e[0;33m'
+PS1="\n\u:\w \$(git_bash_output)\[$NO_COLOR\] \n→ "

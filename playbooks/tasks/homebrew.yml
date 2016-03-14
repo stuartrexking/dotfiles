@@ -34,14 +34,16 @@
     - postgresql
     - protobuf
     - pv
+    - sbt
     - scala
     - ssh-copy-id
     - subversion
-	- terraform
+    - terraform
     - the_silver_searcher
     - tig
     - tmux
     - tree
+    - typesafe-activator
     - unrar
     - vagrant-completion
     - vcprompt
@@ -64,3 +66,4 @@
 
 - name: Install openssh with Homebrew
   homebrew: name=openssh state=latest install_options=with-keychain-support
+
