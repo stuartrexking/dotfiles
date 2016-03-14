@@ -17,5 +17,6 @@ set fileformat=unix
 set fileformats=unix,dos
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/node_modules/*
 
 let mapleader =","
