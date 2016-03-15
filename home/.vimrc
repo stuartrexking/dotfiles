@@ -17,6 +17,7 @@ set fileformat=unix
 set fileformats=unix,dos
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_show_hidden = 1
 
 set wildignore+=*/node_modules/*,*/Godeps/*
 
