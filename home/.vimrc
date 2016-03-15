@@ -17,6 +17,9 @@ set fileformat=unix
 set fileformats=unix,dos
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*/node_modules/*
+
+set wildignore+=*/node_modules/*,*/Godeps/*
 
 let mapleader =","
+
+nnoremap <leader>t :CtrlP<CR>

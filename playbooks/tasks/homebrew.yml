@@ -71,7 +71,7 @@
   homebrew: name=openssh state=latest install_options=with-keychain-support
 
 - name: Install libraries with Homebrew cask
-  homebrew_cask: name={{ item }} state=latest
+  homebrew_cask: name={{ item }}
   with_items:
    - consul
    - vagrant
