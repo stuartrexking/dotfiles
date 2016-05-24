@@ -21,6 +21,7 @@
     - cloc
     - coreutils
     - curl
+    - direnv
     - flyway
     - fswatch
     - gist
@@ -75,3 +76,4 @@
   with_items:
    - consul
    - vagrant
+   - java
