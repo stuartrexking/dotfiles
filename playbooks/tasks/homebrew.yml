@@ -14,6 +14,7 @@
   homebrew: name={{ item }} state=latest
   with_items:
     - awscli
+    - awsebcli
     - bash
     - bash-completion
     - cask
@@ -32,6 +33,7 @@
     - maven
     - mercurial
     - node
+    - octave
     - openssl
     - pkg-config
     - packer
