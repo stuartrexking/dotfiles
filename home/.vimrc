@@ -23,4 +23,4 @@ set wildignore+=*/node_modules/*,*/Godeps/*
 
 let mapleader =","
 
-nnoremap <leader>t :CtrlP<CR>
+nnoremap <leader>f :CtrlP<cr> 
