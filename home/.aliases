@@ -3,3 +3,4 @@ function cdg() {
 }
 
 alias cdw='cd ~/Workspace'
+alias l='less'
