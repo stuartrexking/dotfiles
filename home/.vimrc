@@ -23,4 +23,4 @@ set wildignore+=*/node_modules/*,*/Godeps/*
 
 let mapleader =","
 
-nnoremap <leader>f :CtrlP<cr> 
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>

@@ -20,6 +20,7 @@
     - cask
     - caskroom/cask/brew-cask
     - cloc
+    - cmake
     - coreutils
     - curl
     - direnv
