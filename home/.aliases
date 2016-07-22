@@ -2,5 +2,6 @@ function cdg() {
     cd ~/Workspace/go/src
 }
 
+alias cddwn='cd ~/Downloads'
 alias cdw='cd ~/Workspace'
 alias l='less'

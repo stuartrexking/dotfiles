@@ -18,6 +18,9 @@ set backspace=indent,eol,start
 set noswapfile
 set fileformat=unix
 set fileformats=unix,dos
+set statusline+=%f
+set laststatus=2
+set title
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_show_hidden = 1
