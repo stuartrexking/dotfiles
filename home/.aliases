@@ -4,4 +4,5 @@ function cdg() {
 
 alias cddwn='cd ~/Downloads'
 alias cdw='cd ~/Workspace'
+alias gfr='git fetch -a;git rebase'
 alias l='less'
