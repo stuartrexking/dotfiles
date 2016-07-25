@@ -10,3 +10,7 @@
 
 - name: Clone ctrlp
   git: repo=https://github.com/kien/ctrlp.vim.git dest=~/.vim/bundle/ctrlp.vim
+
+- name: Syntastic
+  git: https://github.com/scrooloose/syntastic.git dest=~/.vim/bundle/syntastic depth=1
+
