@@ -2,31 +2,54 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+""""""""""""""""""""""""""""""
+" THEME
+""""""""""""""""""""""""""""""
 set background=dark
 colorscheme solarized
 
-set hidden
-set nocompatible
-set number
+""""""""""""""""""""""""""""""
+" BASIC EDITING CONFIGURATION
+""""""""""""""""""""""""""""""
+set autoindent
 set autoread
-set ruler
-set paste
-set expandtab
-set colorcolumn=80
-set nowrap
 set backspace=indent,eol,start
-set noswapfile
+set colorcolumn=80
+set expandtab
 set fileformat=unix
 set fileformats=unix,dos
-set statusline+=%f
+set hidden
+set history=10000
 set laststatus=2
+set nocompatible
+set nowrap
+set noswapfile
+set number
+set paste
+set ruler
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set title
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_show_hidden = 1
+""""""""""""""""""""""""""""""
+" STATUS LINE
+""""""""""""""""""""""""""""""
+set statusline=%F
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
 
-set wildignore+=*/node_modules/*,*/Godeps/*
-
+""""""""""""""""""""""""""""""
+" CONTROLS
+""""""""""""""""""""""""""""""
 let mapleader =","
+nnoremap <leader><leader> <c-^>
 
+""""""""""""""""""""""""""""""
+"  COMMANDT
+""""""""""""""""""""""""""""""
+set wildignore+=*/node_modules/*,*/Godeps/*
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+
