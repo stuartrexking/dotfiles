@@ -15,6 +15,7 @@ set autoindent
 set autoread
 set backspace=indent,eol,start
 set colorcolumn=80
+set cursorline
 set expandtab
 set fileformat=unix
 set fileformats=unix,dos
