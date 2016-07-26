@@ -4,5 +4,9 @@ function cdg() {
 
 alias cddwn='cd ~/Downloads'
 alias cdw='cd ~/Workspace'
+
+alias gac='git add -Aa;git ci -m '
 alias gfr='git fetch -a;git rebase'
+alias gs='git stash'
+alias gsa='git stash apply'
 alias l='less'
