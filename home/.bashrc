@@ -11,3 +11,5 @@ fi
 eval "$(direnv hook bash)"
 
 source ~/.aliases
+source ~/.sensitive
+
