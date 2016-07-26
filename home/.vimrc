@@ -21,6 +21,7 @@ set fileformat=unix
 set fileformats=unix,dos
 set hidden
 set history=10000
+set incsearch
 set laststatus=2
 set nocompatible
 set nowrap
