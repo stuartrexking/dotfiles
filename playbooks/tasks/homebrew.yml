@@ -28,6 +28,7 @@
     - fswatch
     - gist
     - git
+    - git-extras
     - gnu-sed
     - heroku
     - leiningen
