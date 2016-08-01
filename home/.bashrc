@@ -12,9 +12,9 @@ fi
 eval "$(direnv hook bash)"
 
 #source highlighting in less
-LESSPIPE=`which src-hilite-lesspipe.sh`
-export LESSOPEN="| ${LESSPIPE} %s"
-export LESS=' -R -X -F '
+export LESSOPEN="| source-highlight -f esc-solarized \
+  --style-file=esc-solarized.style -i %s -o STDOUT"
+export LESS=" -R "
 
 source ~/.aliases
 source ~/.sensitive
