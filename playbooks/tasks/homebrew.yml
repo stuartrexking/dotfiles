@@ -58,6 +58,7 @@
     - vcprompt
     - vim
     - watch
+    - watchman
     - weechat
     - wget
     - wireshark

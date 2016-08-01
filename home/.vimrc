@@ -55,3 +55,8 @@ nnoremap <leader><leader> <c-^>
 set wildignore+=*/node_modules/*,*/Godeps/*
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
+""""""""""""""""""""""""""""""
+"  Mustache and Handlebars
+""""""""""""""""""""""""""""""
+let g:mustache_abbreviations = 1
+
