@@ -13,7 +13,7 @@ eval "$(direnv hook bash)"
 
 #source highlighting in less
 export LESSOPEN="| source-highlight -f esc-solarized \
-  --style-file=esc-solarized.style -i %s -o STDOUT"
+  --style-file=~/.source-highlight/esc-solarized.style -i %s -o STDOUT"
 export LESS=" -R "
 
 source ~/.aliases

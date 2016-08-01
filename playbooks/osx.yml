@@ -5,4 +5,4 @@
     - include: tasks/homebrew.yml
     - include: tasks/go.yml
     - include: tasks/vim.yml
-#    - include: tasks/emacs.yml
+
