@@ -1,3 +1,7 @@
 ---
-description: Install "coffee-script" node.js package globally.
-- npm: name=ember-cli version=2.7 global=yes
+ - name: Install "ember-cli" node.js package globally.
+   npm: name=ember-cli version=2.7 global=yes
+
+ - name: Install "phantomjs-prebuilt" node.js package globally.
+   npm: name=phantomjs-prebuilt global=yes
+
