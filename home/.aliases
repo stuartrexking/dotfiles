@@ -11,6 +11,8 @@ alias gs='git stash'
 alias gsa='git stash apply'
 alias gps='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
+alias hub='git'
+
 alias l='less'
 alias view='vi -R'
 

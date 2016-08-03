@@ -17,7 +17,7 @@
 
 [core]
     excludesfile = ~/.gitignore
-    editor = emacs
+    editor = vi
     autocrlf = false
     safecrlf = true
 

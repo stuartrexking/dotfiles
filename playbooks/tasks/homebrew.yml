@@ -30,6 +30,7 @@
     - git-extras
     - gnu-sed
     - heroku
+    - hub
     - leiningen
     - maven
     - mercurial
