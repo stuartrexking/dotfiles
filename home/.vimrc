@@ -27,7 +27,7 @@ set nocompatible
 set nowrap
 set noswapfile
 set number
-set paste
+set nopaste
 set ruler
 set shiftwidth=4
 set softtabstop=4
