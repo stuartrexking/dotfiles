@@ -48,6 +48,8 @@ set statusline+=\ %P    "percent through file
 """"""""""""""""""""""""""""""
 let mapleader =","
 nnoremap <leader><leader> <c-^>
+nnoremap <leader>ev :vsplit ~/.dotfiles/home/.vimrc<cr>
+nnoremap <leader>sv :w <bar> :!cp ~/.dotfiles/home/.vimrc ~/<cr> <bar> :source $MYVIMRC<cr> <bar> :q<cr>
 
 """"""""""""""""""""""""""""""
 "  COMMANDT
