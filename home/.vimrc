@@ -1,5 +1,6 @@
 execute pathogen#infect()
 syntax on
+filetype on
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""
@@ -38,18 +39,32 @@ set title
 " STATUS LINE
 """"""""""""""""""""""""""""""
 set statusline=%F
+set statusline+=\ 
+set statusline+=%y
 set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
 """"""""""""""""""""""""""""""
-" CONTROLS
+" MAPPINGS
 """"""""""""""""""""""""""""""
 let mapleader =","
+"NORMAL MODE
+"switch to previous buffer
 nnoremap <leader><leader> <c-^>
+"edit .vimrc
 nnoremap <leader>ev :vsplit ~/.dotfiles/home/.vimrc<cr>
+"source .vimrc
 nnoremap <leader>sv :w <bar> :!cp ~/.dotfiles/home/.vimrc ~/<cr> <bar> :source $MYVIMRC<cr> <bar> :q<cr>
+"surround with double quotes
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+"surround with single quotes
+nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+
+"INSERT MODE
+inoremap jk <esc>
+inoremap <esc> <nop>
 
 """"""""""""""""""""""""""""""
 "  COMMANDT
