@@ -14,5 +14,15 @@ alias gps='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias hub='git'
 
 alias l='less'
+
+function mcd() {
+    mkdir -p "$1";
+    cd "$1"
+}
+
+function rmrf() {
+    rm -rf "$1";
+}
+
 alias view='vi -R'
 
