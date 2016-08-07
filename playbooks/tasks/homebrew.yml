@@ -46,6 +46,7 @@
     - sbt
     - scala
     - source-highlight
+    - sqlite3
     - ssh-copy-id
     - subversion
     - terraform

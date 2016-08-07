@@ -50,6 +50,7 @@ set statusline+=\ %P    "percent through file
 " MAPPINGS
 """"""""""""""""""""""""""""""
 let mapleader =","
+let maplocalleader = "\\"
 "NORMAL MODE
 "switch to previous buffer
 nnoremap <leader><leader> <c-^>
@@ -65,6 +66,16 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 "INSERT MODE
 inoremap jk <esc>
 inoremap <esc> <nop>
+
+"OPERATOR MAPPINGS
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap il( :<c-u>normal! F)vi(<cr>
+
+"JAVASCRIPT
+augroup javascript
+    autocmd!
+    autocmd FileType javascript nnoremap <buffer> <leader>t :w <bar> :!clear && node %<cr>
+augroup END
 
 """"""""""""""""""""""""""""""
 "  COMMANDT
