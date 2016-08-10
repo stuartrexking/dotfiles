@@ -66,6 +66,8 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 "INSERT MODE
 inoremap jk <esc>
 inoremap <esc> <nop>
+"uppercase current word
+inoremap <c-u> <esc> viwUei
 
 "OPERATOR MAPPINGS
 onoremap in( :<c-u>normal! f(vi(<cr>
