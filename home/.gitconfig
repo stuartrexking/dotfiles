@@ -1,7 +1,7 @@
 [alias]
     aa = add --all
     ac = "!f(){ git aa;git c; };f"
-    amend = commit --amend
+    am = commit --amend
     c = commit
     co = checkout
     di = diff
@@ -13,7 +13,7 @@
     lop = log master..$1 --pretty=format:%s
     pom = push origin master
     ps = "!f(){ git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD); };f"
-    pullff = pull --ff-only
+    pff = pull --ff-only
     r = rebase
     s = stash
     sa = stash apply
