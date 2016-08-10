@@ -11,7 +11,7 @@
     fr = "!f(){ git fa;git r; };f"
     lo = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
     lop = log master..$1 --pretty=format:%s
-    pom = push origin master
+    p = push
     ps = "!f(){ git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD); };f"
     pff = pull --ff-only
     r = rebase
