@@ -14,3 +14,6 @@
 - name: Vim Mustache and Handlebars
   git: repo=git://github.com/mustache/vim-mustache-handlebars.git dest=~/.vim/bundle/mustache
 
+- name: Vim Markdown
+  git: repo=git://github.com/plasticboy/vim-markdown.git dest=~/.vim/bundle/vim-markdown
+
