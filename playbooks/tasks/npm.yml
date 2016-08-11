@@ -5,3 +5,6 @@
  - name: Install "phantomjs-prebuilt" node.js package globally.
    npm: name=phantomjs-prebuilt global=yes
 
+ - name: Install "selenium-standalone@latest" selenium package globally.
+   npm: name=selenium-standalone@latest global=yes state=latest
+
