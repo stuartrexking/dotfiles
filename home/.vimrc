@@ -77,6 +77,7 @@ onoremap il( :<c-u>normal! F)vi(<cr>
 augroup javascript
     autocmd!
     autocmd FileType javascript nnoremap <buffer> <leader>t :w <bar> :!clear && node %<cr>
+    autocmd bufwritepost *.js silent !standard-format -w %
 augroup END
 
 """"""""""""""""""""""""""""""

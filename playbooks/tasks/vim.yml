@@ -8,12 +8,15 @@
 - name: Get Pathogen
   get_url: url=https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim dest=~/.vim/autoload/pathogen.vim
 
-- name: Vim Solarized
-  git: repo=git://github.com/altercation/vim-colors-solarized.git dest=~/.vim/bundle/vim-colors-solarized
+- name: Vim Markdown
+  git: repo=git://github.com/plasticboy/vim-markdown.git dest=~/.vim/bundle/vim-markdown
 
 - name: Vim Mustache and Handlebars
   git: repo=git://github.com/mustache/vim-mustache-handlebars.git dest=~/.vim/bundle/mustache
 
-- name: Vim Markdown
-  git: repo=git://github.com/plasticboy/vim-markdown.git dest=~/.vim/bundle/vim-markdown
+- name: Vim Solarized
+  git: repo=git://github.com/altercation/vim-colors-solarized.git dest=~/.vim/bundle/vim-colors-solarized
+
+- name: Syntastic
+  git: repo=git://github.com/scrooloose/syntastic.git dest=~/.vim/bundle/syntastic
 

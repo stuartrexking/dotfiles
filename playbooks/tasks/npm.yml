@@ -5,6 +5,12 @@
  - name: Install "phantomjs-prebuilt" node.js package globally.
    npm: name=phantomjs-prebuilt global=yes
 
- - name: Install "selenium-standalone@latest" selenium package globally.
+ - name: Install "selenium-standalone" selenium package globally.
    npm: name=selenium-standalone global=yes
+
+ - name: Install standard
+   npm: name=standard global=yes
+
+ - name: Install "standard-format"
+   npm: name=standard-format global=yes
 
