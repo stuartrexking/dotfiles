@@ -7,7 +7,7 @@ function cdw() {
 }
 
 function cheat() {
-    less ~/.cheatsheet/$@
+    less ~/.cheatsheets/$@
 }
 
 alias cddwn='cd ~/Downloads'
