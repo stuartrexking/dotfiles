@@ -83,5 +83,6 @@
 - name: Install libraries with Homebrew cask
   homebrew_cask: name={{ item }}
   with_items:
-   - vagrant
    - java
+   - ngrok
+   - vagrant

@@ -30,9 +30,9 @@ set noswapfile
 set number
 set nopaste
 set ruler
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set title
 
 """"""""""""""""""""""""""""""
@@ -77,13 +77,13 @@ onoremap il( :<c-u>normal! F)vi(<cr>
 augroup javascript
     autocmd!
     autocmd FileType javascript nnoremap <buffer> <leader>t :w <bar> :!clear && node %<cr>
-    autocmd bufwritepost *.js silent !standard-format -w %
+    " autocmd BufWritePost *.js silent !standard-format -w %
 augroup END
 
 """"""""""""""""""""""""""""""
 "  COMMANDT
 """"""""""""""""""""""""""""""
-set wildignore+=*/node_modules/*,*/Godeps/*
+set wildignore+=*/node_modules/*,*/Godeps/*,*/bower_components/*,*/tmp/*,*/dist/*
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
 """"""""""""""""""""""""""""""
