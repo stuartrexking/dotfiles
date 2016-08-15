@@ -6,6 +6,10 @@ function cdw() {
     cd ~/Workspace/$@
 }
 
+function cheat() {
+    less ~/.cheatsheet/$@
+}
+
 alias cddwn='cd ~/Downloads'
 
 alias g='git'
