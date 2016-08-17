@@ -3,15 +3,12 @@ syntax on
 filetype on
 filetype plugin indent on
 
-""""""""""""""""""""""""""""""
-" THEME
-""""""""""""""""""""""""""""""
+" Theme {{{
 set background=dark
 colorscheme solarized
+" }}}
 
-""""""""""""""""""""""""""""""
-" BASIC EDITING CONFIGURATION
-""""""""""""""""""""""""""""""
+" Basic Configuration {{{
 set autoindent
 set autoread
 set backspace=indent,eol,start
@@ -34,10 +31,9 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set title
+" }}}
 
-""""""""""""""""""""""""""""""
-" STATUS LINE
-""""""""""""""""""""""""""""""
+" Status Line {{{
 set statusline=%F
 set statusline+=\ 
 set statusline+=%y
@@ -45,49 +41,59 @@ set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
+" }}}
 
-""""""""""""""""""""""""""""""
-" MAPPINGS
-""""""""""""""""""""""""""""""
+" Leaders {{{
 let mapleader =","
 let maplocalleader = "\\"
-"NORMAL MODE
+" }}}
+
+" Normal Mode Mappings {{{
 "switch to previous buffer
 nnoremap <leader><leader> <c-^>
 "edit .vimrc
 nnoremap <leader>ev :vsplit ~/.dotfiles/home/.vimrc<cr>
-"source .vimrc
+"save and source .vimrc
 nnoremap <leader>sv :w <bar> :!cp ~/.dotfiles/home/.vimrc ~/<cr> <bar> :source $MYVIMRC<cr> <bar> :q<cr>
 "surround with double quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 "surround with single quotes
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+" }}}
 
-"INSERT MODE
+" Insert Mode Mappings {{{
 inoremap jk <esc>
 inoremap <esc> <nop>
 "uppercase current word
 inoremap <c-u> <esc> viwUei
+" }}}
 
-"OPERATOR MAPPINGS
+" Operator-pending mappings {{{
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
+" }}}
 
-"JAVASCRIPT
+" Javascript file settings {{{
 augroup javascript
-    autocmd!
-    autocmd FileType javascript nnoremap <buffer> <leader>t :w <bar> :!clear && node %<cr>
-    " autocmd BufWritePost *.js silent !standard-format -w %
+  autocmd!
+  autocmd FileType javascript nnoremap <buffer> <leader>t :w <bar> :!clear && node %<cr>
+  autocmd BufWritePost *.js silent !standard-format -w %
 augroup END
+" }}}
+"
+" Vimscript file settings {{{
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
 
-""""""""""""""""""""""""""""""
-"  COMMANDT
-""""""""""""""""""""""""""""""
+" CommandT {{{
 set wildignore+=*/node_modules/*,*/Godeps/*,*/bower_components/*,*/tmp/*,*/dist/*
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+" }}}
 
-""""""""""""""""""""""""""""""
-"  Mustache and Handlebars
-""""""""""""""""""""""""""""""
+" Mustache and Handlebars {{{
 let g:mustache_abbreviations = 1
+" }}}
 
