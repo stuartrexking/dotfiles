@@ -15,7 +15,8 @@
     ps = "!f(){ git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD); };f"
     pff = pull --ff-only
     r = rebase
-    s = stash
+    s = status
+    st = stash
     sa = stash apply
     st = status
 
