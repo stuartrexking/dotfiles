@@ -12,5 +12,6 @@ fi
 eval "$(direnv hook bash)"
 
 source ~/.aliases
+# I keep a secret dotfile repo for sensitive stuff and load it here
 source ~/.secret
 
