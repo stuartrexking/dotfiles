@@ -1,3 +1,0 @@
----
-- name: Configure Emacs
-  git: repo=https://github.com/stuartrexking/emacs.d.git dest=~/.emacs.d

@@ -9,11 +9,7 @@
 ## Installing
 
 ```
-cd ~
-git clone git@github.com:stuartrexking/dotfiles.git .dotfiles
-cd ~/.dotfiles
+git clone git@github.com:stuartrexking/dotfiles.git
+cd dotfiles
 make
-
-cd ~/.emacs.d
-cask install
 ```

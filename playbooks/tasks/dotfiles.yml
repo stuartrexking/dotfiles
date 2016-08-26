@@ -1,6 +1,6 @@
 ---
 - name: Synchronize dotfiles
-  synchronize: src=~/.dotfiles/dotfiles/ dest=~
+  synchronize: src=~../../dotfiles/ dest=~
 
 - name: Create file
   command: touch ~/.bash_sessions_disable
