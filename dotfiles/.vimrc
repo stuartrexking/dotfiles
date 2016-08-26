@@ -52,9 +52,9 @@ let maplocalleader = "\\"
 "switch to previous buffer
 nnoremap <leader><leader> <c-^>
 "edit .vimrc
-nnoremap <leader>ev :vsplit ~/Workspace/dotfiles/home/.vimrc<cr>
+nnoremap <leader>ev :vsplit ~/Workspace/dotfiles/dotfiles/.vimrc<cr>
 "save and source .vimrc
-nnoremap <leader>sv :w <bar> :!cp ~/Workspace/dotfiles/home/.vimrc ~/<cr> <bar> :source $MYVIMRC<cr> <bar> :q<cr>
+nnoremap <leader>sv :w <bar> :!cp ~/Workspace/dotfiles/dotfiles/.vimrc ~/<cr> <bar> :source $MYVIMRC<cr> <bar> :q<cr>
 "surround with double quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 "surround with single quotes
