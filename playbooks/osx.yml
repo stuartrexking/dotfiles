@@ -6,5 +6,4 @@
     - include: tasks/go.yml
     - include: tasks/npm.yml
     - include: tasks/vim.yml
-    - include: tasks/cheatsheets.yml
 

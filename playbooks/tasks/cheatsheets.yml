@@ -1,6 +1,0 @@
----
-- name: Make cheatsheets directory
-  file: path=~/.cheatsheets state=directory
-
-- name: Synchronize cheatsheets
-  synchronize: src=~/.dotfiles/cheatsheets/ dest=~/.cheatsheets

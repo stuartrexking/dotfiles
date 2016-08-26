@@ -1,7 +1,7 @@
-export EDITOR="emacs"
+export EDITOR="vi"
 export GOPATH=~/Workspace/go
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="~/.bin:/usr/local/sbin:/usr/local/bin:$PATH:$GOPATH/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH:$GOPATH/bin"
 export PS1='\[\033[0;36m\]\t\[\e[0m\] \w \[\033[0;32m\]$(vcprompt -f "[%n:%b%u%m] ")\[\033[1;34m\]\$ \[\033[0m\] \n→ '
 
 #bash completion
@@ -11,11 +11,6 @@ fi
 
 eval "$(direnv hook bash)"
 
-#source highlighting in less
-export LESSOPEN="| source-highlight -f esc-solarized \
-  --style-file=~/.source-highlight/esc-solarized.style -i %s -o STDOUT"
-export LESS=" -R "
-
 source ~/.aliases
-source ~/.sensitive
+source ~/.secret
 

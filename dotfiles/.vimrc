@@ -77,9 +77,9 @@ onoremap il( :<c-u>normal! F)vi(<cr>
 augroup javascript
   autocmd!
   autocmd FileType javascript nnoremap <buffer> <leader>t :w <bar> :!clear && node %<cr>
-  autocmd BufWritePost *.js silent call FormatJavascript()
+  autocmd BufWritePost *.js silent! call FormatJavascript()
   function! FormatJavascript()
-    !eslint --fix --quiet %
+    "execute "!eslint --fix --quiet % >/dev/null 2>&1"
   endfunction
 augroup END
 " }}}
