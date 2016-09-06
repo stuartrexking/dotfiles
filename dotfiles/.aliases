@@ -1,3 +1,5 @@
+alias c='printf "\033c"'
+
 function cdg() {
     cd ~/Workspace/go/src
 }
