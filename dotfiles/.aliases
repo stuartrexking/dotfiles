@@ -13,11 +13,9 @@ function cheat() {
 }
 
 alias cddwn='cd ~/Downloads'
-
+alias fr='g fr'
 alias g='git'
-
 alias hub='git'
-
 alias l='less'
 alias ls='ls -al'
 
@@ -25,6 +23,8 @@ function mcd() {
     mkdir -p "$1";
     cd "$1"
 }
+
+alias push='g p'
 
 function rlg() {
   if [ -x bin/rails ]; then
