@@ -21,3 +21,6 @@
  - name: Install "standard-format"
    npm: name=standard-format global=yes
 
+ - name: Install "serverless"
+   npm: name=serverless global=yes
+
