@@ -13,3 +13,4 @@ git clone git@github.com:stuartrexking/dotfiles.git
 cd dotfiles
 make
 ```
+tar -czf - 2009 | gof3r put -b personal.stuartrexking.com -k pictures/2009.tar.gz --endpoint=s3-ap-southeast-2.amazonaws.com

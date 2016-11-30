@@ -1,8 +1,10 @@
 [alias]
+    a = add --all
     aa = add --all
     ac = "!f(){ git aa;git c; };f"
     am = commit --amend
     c = commit
+    comit = commit
     co = checkout
     d = diff
     dc = diff -- cached

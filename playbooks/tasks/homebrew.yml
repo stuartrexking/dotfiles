@@ -28,6 +28,7 @@
     - gist
     - git
     - git-extras
+    - gpg
     - gnu-sed
     - heroku
     - hub
@@ -38,12 +39,14 @@
     - node
     - octave
     - openssl
+    - pinentry-mac
     - pkg-config
     - packer
     - postgresql
     - protobuf
     - pv
     - rbenv
+    - rlwrap
     - sbt
     - scala
     - source-highlight
