@@ -23,6 +23,7 @@
     - coreutils
     - curl
     - direnv
+    - ffmpeg
     - flyway
     - fswatch
     - gist
