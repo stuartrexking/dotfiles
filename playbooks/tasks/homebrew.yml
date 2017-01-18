@@ -91,4 +91,5 @@
   with_items:
    - java
    - ngrok
+   - virtualbox
    - vagrant
