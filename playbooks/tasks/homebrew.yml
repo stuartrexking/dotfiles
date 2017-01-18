@@ -35,6 +35,7 @@
     - hub
     - irssi
     - leiningen
+    - markdown
     - maven
     - mercurial
     - node
@@ -47,6 +48,7 @@
     - protobuf
     - pv
     - rbenv
+    - readline
     - rlwrap
     - sbt
     - scala

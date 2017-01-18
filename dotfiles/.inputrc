@@ -1,9 +1,2 @@
 set completion-ignore-case On
-set editing-mode vi set keymap vi-command
-$if mode=vi
-    set keymap vi-command
-    Control-l: clear-screen
-    set keymap vi-insert
-    Control-l: clear-screen
-    Control-p: previous-history
-$endif
+
