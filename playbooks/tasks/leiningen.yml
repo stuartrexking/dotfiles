@@ -3,9 +3,9 @@
   become: yes
 
 - name: download lein
-  get_url:  url=https://raw.github.com/technomancy/leiningen/stable/bin/lein
-            dest=/usr/local/share/leiningen-stable/lein
-            mode=0755
+  get_url: url=https://raw.github.com/technomancy/leiningen/stable/bin/lein
+           dest=/usr/local/share/leiningen-stable/lein
+           mode=0755
   become: yes
 
 - name: link lein
