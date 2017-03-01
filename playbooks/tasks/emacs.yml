@@ -1,0 +1,11 @@
+---
+- name: install emacs config
+  git:
+    repo: git@github.com:stuartrexking/emacs.d.git
+    dest: ~/.emacs.d
+
+- name: install emacs
+  apt:
+    name: emacs
+    state: latest
+  become: true 
