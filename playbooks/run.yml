@@ -5,3 +5,4 @@
     - include: tasks/dotfiles.yml
     - include: tasks/emacs.yml
     - include: tasks/dependencies.yml
+    - include: tasks/leiningen.yml
