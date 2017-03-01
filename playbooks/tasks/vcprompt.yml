@@ -1,0 +1,7 @@
+---
+- name: download vcprompt
+  get_url:
+    url: https://github.com/djl/vcprompt/raw/master/bin/vcprompt
+    dest: /usr/local/bin/vcprompt
+    mode: 0755
+  become: true

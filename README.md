@@ -1,10 +1,11 @@
 # dotfiles
 
+I run this on Ubuntu.
+
 ## Prerequisites
 
-1. Install Homebrew.
-2. Install Ansible (`brew install ansible`).
-3. Install [Go](http://golang.org/dl/).
+1. Install git and configure your [GitHub keys](https://help.github.com/articles/set-up-git/)
+1. Install [Ansible](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu)
 
 ## Installing
 

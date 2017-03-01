@@ -1,9 +1,0 @@
----
-- name: Install Go dependencies
-  shell: go get -u -v {{ item }}
-  with_items:
-    - github.com/nsf/gocode
-    - github.com/tools/godep
-    - github.com/golang/lint/golint
-    - github.com/monochromegane/the_platinum_searcher
-    - golang.org/x/tools/cmd/goimports

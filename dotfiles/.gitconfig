@@ -1,26 +1,3 @@
-[alias]
-    a = add --all
-    aa = add --all
-    ac = "!f(){ git aa;git c; };f"
-    am = commit --amend
-    c = commit
-    comit = commit
-    co = checkout
-    d = diff
-    dc = diff -- cached
-    fa = fetch -a
-    ff = merge --ff-only
-    fr = "!f(){ git fa;git r; };f"
-    lo = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-    lop = log master..$1 --pretty=format:%s
-    p = push
-    ps = "!f(){ git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD); };f"
-    pff = pull --ff-only
-    r = rebase
-    s = status
-    st = stash
-    sa = stash apply
-
 [color]
     ui = true
 
@@ -33,9 +10,7 @@
 [push]
     default=simple
 
-[include]
-    path = ~/.gitconfig.local
-
 [user]
+    name = Stuart King
     email = stuartrexking@gmail.com
 

@@ -1,2 +1,2 @@
-osx:
-	ansible-playbook -v -D -i playbooks/inventory playbooks/osx.yml
+run:
+	ansible-playbook -v -D -i inventory --ask-sudo-pass playbooks/run.yml

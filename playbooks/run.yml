@@ -1,0 +1,6 @@
+- hosts: targets
+  gather_facts: False
+  tasks:
+    - include: tasks/vcprompt.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/dependencies.yml
