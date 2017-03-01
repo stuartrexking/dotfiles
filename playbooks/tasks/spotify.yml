@@ -1,0 +1,15 @@
+- name: add spotify key
+  apt_key:
+    keyserver: hkp://keyserver.ubuntu.com:80
+    id: BBEBDCB318AD50EC6865090613B00F1FD2C19886
+  become: true
+
+- name: add spotify repo
+  apt_repository:
+    repo: deb http://repository.spotify.com stable non-free
+  become: true
+
+- name: install spotify
+  apt:
+    name: spotify-client
+  become: true
