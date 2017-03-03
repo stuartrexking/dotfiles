@@ -26,6 +26,11 @@ PS1='\[\033[0;36m\]\t\[\e[0m\] \w \[\033[0;32m\]$(vcprompt -f "[%n:%b%u%m] ")\[\
 # evaluate direnv if we have it
 eval "$(direnv hook bash)"
 
+# I keep exports in their own file
+if [ -f ~/.bash_exports ]; then
+    . ~/.bash_exports
+fi
+
 # I keep aliases in their own file
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

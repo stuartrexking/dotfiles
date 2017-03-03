@@ -1,0 +1,8 @@
+- name: download golang
+  get_url: url=https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
+           dest=/tmp/go1.8.linux-amd64.tar.gz
+
+- name: extract archive
+  shell: tar -C /usr/local -xzf /tmp/go1.8.linux-amd64.tar.gz
+  become: true
+

@@ -4,6 +4,7 @@
     - include: tasks/vcprompt.yml
     - include: tasks/dotfiles.yml
     - include: tasks/emacs.yml
+    - include: tasks/golang.yml
     - include: tasks/dependencies.yml
     - include: tasks/leiningen.yml
     - include: tasks/rofi.yml
