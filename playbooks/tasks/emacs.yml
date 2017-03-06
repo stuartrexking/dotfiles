@@ -2,7 +2,8 @@
   git:
     repo: git@github.com:stuartrexking/emacs.d.git
     dest: ~/.emacs.d
-
+    force: yes
+    
 - name: install emacs
   dnf:
     name: emacs
