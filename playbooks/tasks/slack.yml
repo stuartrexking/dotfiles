@@ -1,19 +1,20 @@
 - name: check if slack is installed
-  command: dpkg-query -W slack-desktop
-  register: slack_check_deb
-  failed_when: slack_check_deb.rc > 1
-  changed_when: slack_check_deb.rc == 1
+  command: rpm -q slack-desktop
+  register: slack_check_rpm
+  failed_when: slack_check_rpm.rc > 1
+  changed_when: slack_check_rpm.rc == 1
 
 - name: download slack
-  get_url: url=https://downloads.slack-edge.com/linux_releases/slack-desktop-2.5.1-amd64.deb
-           dest=/tmp/slack.deb
-  when: slack_check_deb.rc == 1
+  get_url: url=https://downloads.slack-edge.com/linux_releases/slack-2.5.1-0.1.fc21.x86_64.rpm
+           dest=/tmp/slack.rpm
+  when: slack_check_rpm.rc == 1
 
 - name: install slack
-  apt: deb=/tmp/slack.deb
+  dnf:
+    name: /tmp/slack.rpm
   become: true
-  when: slack_check_deb.rc == 1
+  when: slack_check_rpm.rc == 1
 
-- name: delete slack deb
+- name: delete slack rpm
   file: state=absent
-        path=/tmp/slack.deb
+        path=/tmp/slack.rpm

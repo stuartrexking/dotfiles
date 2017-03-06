@@ -8,5 +8,5 @@
 #    - include: tasks/dependencies.yml
 #    - include: tasks/leiningen.yml
 #    - include: tasks/rofi.yml
-#    - include: tasks/slack.yml
+    - include: tasks/slack.yml
 #    - include: tasks/spotify.yml
