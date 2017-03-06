@@ -4,7 +4,7 @@
     dest: ~/.emacs.d
 
 - name: install emacs
-  apt:
+  dnf:
     name: emacs
     state: latest
   become: true 
