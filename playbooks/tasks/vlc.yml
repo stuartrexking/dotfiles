@@ -1,0 +1,11 @@
+- name: Install vlc repo
+  dnf:
+    name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-25.noarch.rpm"
+    state: present
+  become: true
+
+- name: Install vlc
+  dnf:
+    name: vlc
+    state: latest
+  become: true

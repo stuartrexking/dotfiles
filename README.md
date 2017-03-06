@@ -1,6 +1,6 @@
 # dotfiles
 
-I run this on Ubuntu.
+I run this on Fedora 25
 
 ## Prerequisites
 

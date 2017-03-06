@@ -1,1 +1,5 @@
----
+- name: Install unzip
+  dnf:
+    name: unzip
+    state: latest
+  become: true

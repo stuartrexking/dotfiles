@@ -1,0 +1,37 @@
+# assumes running the latest kernel
+
+- name: download repo files for virtualbox
+  get_url:
+    url: http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+    dest: /etc/yum.repos.d/
+    mode: 0644
+  become: true
+  
+- name: install dependencies
+  dnf: name={{item}} state=latest
+  with_items:
+       - binutils
+       - gcc
+       - make
+       - patch
+       - libgomp
+       - glibc-headers
+       - glibc-devel
+       - kernel-headers
+       - kernel-devel
+       - dkms
+  become: true
+
+- name: install VirtualBox
+  dnf:
+    name: VirtualBox-5.1
+    state: latest
+  become: true
+
+- name: rebuild kernel modules
+  shell: /usr/lib/virtualbox/vboxdrv.sh setup
+  become: true
+
+- name: add me to vboxusers
+  shell: usermod -a -G vboxusers stuartrexking
+  become: true
