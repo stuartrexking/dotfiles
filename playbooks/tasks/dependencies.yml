@@ -3,3 +3,14 @@
     name: unzip
     state: latest
   become: true
+
+- name: install the 'Development Tools' package group
+  dnf:
+    name: '@Development Tools'
+    state: present
+
+- name: install the 'C Development Tools and Libraries' package group
+  dnf:
+    name: '@C Development Tools and Libraries'
+    state: present
+

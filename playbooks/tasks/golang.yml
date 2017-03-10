@@ -3,6 +3,12 @@
            dest=/tmp/go1.8.linux-amd64.tar.gz
 
 - name: extract archive
-  shell: tar -C /usr/local -xzf /tmp/go1.8.linux-amd64.tar.gz
+  unarchive:
+    src: /tmp/go1.8.linux-amd64.tar.gz
+    dest: /usr/local
   become: true
 
+- name: Install Go dependencies
+  shell: go get -u -v {{ item }}
+  with_items:
+    - github.com/spf13/hugo

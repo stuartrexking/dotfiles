@@ -4,10 +4,13 @@
     - include: tasks/vcprompt.yml
     - include: tasks/dotfiles.yml
     - include: tasks/emacs.yml
+    - include: tasks/expressvpn.yml
     - include: tasks/golang.yml
     - include: tasks/dependencies.yml
     - include: tasks/leiningen.yml
+    - include: tasks/python.yml
+    - include: tasks/ruby.yml
     - include: tasks/slack.yml
     - include: tasks/virtualbox.yml
     - include: tasks/vlc.yml
-    
+
