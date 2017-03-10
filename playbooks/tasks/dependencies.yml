@@ -1,16 +1,7 @@
-- name: Install unzip
-  dnf:
-    name: unzip
-    state: latest
-  become: true
-
-- name: install the 'Development Tools' package group
-  dnf:
-    name: '@Development Tools'
-    state: present
-
-- name: install the 'C Development Tools and Libraries' package group
-  dnf:
-    name: '@C Development Tools and Libraries'
-    state: present
-
+- name: install dependencies
+  dnf: name={{ item }}
+  with_items:
+    - awscli
+    - unzip
+    - '@Development Tools'
+    - '@C Development Tools and Libraries'
