@@ -2,6 +2,10 @@
   dnf: name={{ item }}
   with_items:
     - awscli
+    - java-1.8.0-openjdk
+    - java-1.8.0-openjdk-devel
     - unzip
+    - vagrant
     - '@Development Tools'
     - '@C Development Tools and Libraries'
+  become: true
