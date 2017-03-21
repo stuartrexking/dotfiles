@@ -9,3 +9,14 @@
     name: emacs
     state: latest
   become: true 
+
+- file:
+    path: ~/Workspaces/emacs
+    state: directory
+    
+- name: install neotree
+  git:
+    repo: git@github.com:jaypei/emacs-neotree.git
+    dest: ~/Workspaces/emacs/neotree
+    force: yes
+    version: dev

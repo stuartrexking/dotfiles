@@ -9,3 +9,10 @@
     - '@Development Tools'
     - '@C Development Tools and Libraries'
   become: true
+
+- name: download ngrok
+  unarchive:
+    src: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+    dest: ~/bin
+    remote_src: true
+  become: true
