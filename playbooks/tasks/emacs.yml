@@ -20,3 +20,17 @@
     dest: ~/Workspaces/emacs/neotree
     force: yes
     version: dev
+    
+- name: install helm
+  git:
+    repo: https://github.com/emacs-helm/helm.git
+    dest: ~/Workspaces/emacs/helm
+    force: yes
+
+# needed for helm
+- name: install async
+  git:
+    repo: https://github.com/jwiegley/emacs-async.git
+    dest: ~/Workspaces/emacs/async
+    force: yes
+# run make after

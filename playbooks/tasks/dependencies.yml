@@ -2,8 +2,13 @@
   dnf: name={{ item }}
   with_items:
     - awscli
+    - direnv
+    - graphviz
     - java-1.8.0-openjdk
     - java-1.8.0-openjdk-devel
+    - maven
+    - postgresql
+    - the_silver_searcher
     - unzip
     - vagrant
     - '@Development Tools'
@@ -13,6 +18,6 @@
 - name: download ngrok
   unarchive:
     src: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-    dest: ~/bin
+    dest: /usr/local/bin
     remote_src: true
   become: true
