@@ -29,9 +29,12 @@
    - java
    - intellij-idea
    - ngrok
-   - virtualbox
+   - skype
+   - transmission
    - vagrant
-
+   - virtualbox
+   - vlc
+   
 - name: Install Java libs
   homebrew: name={{ item }} state=latest
   with_items:
