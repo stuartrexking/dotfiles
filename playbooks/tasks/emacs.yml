@@ -3,12 +3,12 @@
     repo: git@github.com:stuartrexking/emacs.d.git
     dest: ~/.emacs.d
     force: yes
-    
-- name: install emacs
-  dnf:
-    name: emacs
-    state: latest
-  become: true 
+
+- name: Install emacs with Homebrew
+  homebrew: name=emacs state=present install_options=cocoa
+
+- name: Link emacs with Homebrew
+  homebrew: name=emacs state=linked
 
 - file:
     path: ~/Workspaces/emacs
@@ -33,4 +33,8 @@
     repo: https://github.com/jwiegley/emacs-async.git
     dest: ~/Workspaces/emacs/async
     force: yes
-# run make after
+
+- name: make helm
+  shell: /usr/bin/make
+  args: 
+    chdir: ~/Workspaces/emacs/helm

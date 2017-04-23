@@ -1,23 +1,41 @@
-- name: install dependencies
-  dnf: name={{ item }}
+- name: Tap Homebrew repositories
+  homebrew_tap: name={{ item }} state=present
   with_items:
-    - awscli
-    - direnv
-    - graphviz
-    - java-1.8.0-openjdk
-    - java-1.8.0-openjdk-devel
-    - maven
-    - postgresql
-    - the_silver_searcher
-    - unzip
-    - vagrant
-    - '@Development Tools'
-    - '@C Development Tools and Libraries'
-  become: true
+    - caskroom/cask
+    - homebrew/binary
+    - homebrew/completions
+    - homebrew/dupes
+    - homebrew/versions
 
-- name: download ngrok
-  unarchive:
-    src: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-    dest: /usr/local/bin
-    remote_src: true
-  become: true
+- name: Update and upgrade Homebrew
+  shell: brew update && brew upgrade && brew cleanup
+
+- name: Install libraries with Homebrew
+  homebrew: name={{ item }} state=latest
+  with_items:
+    - direnv
+    - markdown
+    - node
+    - postgresql
+    - rbenv
+
+- name: Install openssh with Homebrew
+  homebrew: name=openssh state=latest install_options=with-keychain-support
+
+- name: Install libraries with Homebrew cask
+  homebrew_cask: name={{ item }}
+  with_items:
+   - google-chrome
+   - java
+   - intellij-idea
+   - ngrok
+   - virtualbox
+   - vagrant
+
+- name: Install Java libs
+  homebrew: name={{ item }} state=latest
+  with_items:
+    - flyway
+    - leiningen
+    - maven
+

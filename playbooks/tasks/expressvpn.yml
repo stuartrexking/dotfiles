@@ -1,3 +1,0 @@
-- name: download expressvpn
-  dnf:
-    name: "https://download.express-vpn.xyz/clients/linux/expressvpn-1.2.0-1.x86_64.rpm"

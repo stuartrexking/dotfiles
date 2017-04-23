@@ -1,14 +1,7 @@
-- name: download golang
-  get_url: url=https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
-           dest=/tmp/go1.8.linux-amd64.tar.gz
+- name: Install go with homebrew
+  homebrew: name=go state=latest
 
-- name: extract archive
-  unarchive:
-    src: /tmp/go1.8.linux-amd64.tar.gz
-    dest: /usr/local
-  become: true
-
-- name: Install Go dependencies
+- name: Install go dependencies
   shell: go get -u -v {{ item }}
   with_items:
     - github.com/spf13/hugo
