@@ -26,6 +26,11 @@ eval "$(direnv hook bash)"
 # evaluate rbenv if we have it
 eval "$(rbenv init -)"
 
+# bash completions
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 # I keep exports in their own file
 if [ -f ~/.bash_exports ]; then
     . ~/.bash_exports

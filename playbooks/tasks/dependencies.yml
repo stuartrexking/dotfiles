@@ -13,12 +13,20 @@
 - name: Install libraries with Homebrew
   homebrew: name={{ item }} state=latest
   with_items:
+    - awscli
+    - awsebcli
+    - bash-completion
+    - boot-clj
     - direnv
     - markdown
     - node
     - postgresql
+    - pyenv
     - rbenv
-
+    - terraform
+    - tmux
+    - wget
+    
 - name: Install openssh with Homebrew
   homebrew: name=openssh state=latest install_options=with-keychain-support
 
@@ -30,6 +38,7 @@
    - intellij-idea
    - ngrok
    - skype
+   - spotify
    - transmission
    - vagrant
    - virtualbox
