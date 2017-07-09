@@ -14,3 +14,5 @@
     name = Stuart King
     email = stuartrexking@gmail.com
 
+[alias]
+    lo = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'

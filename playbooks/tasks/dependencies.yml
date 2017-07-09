@@ -18,14 +18,19 @@
     - bash-completion
     - boot-clj
     - direnv
+    - heroku
+    - imagemagick
     - markdown
-    - node
+    - nvm
     - postgresql
     - pyenv
     - rbenv
+    - rlwrap
     - terraform
     - tmux
+    - watchman
     - wget
+    - yarn
     
 - name: Install openssh with Homebrew
   homebrew: name=openssh state=latest install_options=with-keychain-support
@@ -33,6 +38,7 @@
 - name: Install libraries with Homebrew cask
   homebrew_cask: name={{ item }}
   with_items:
+   - android-studio
    - google-chrome
    - java
    - intellij-idea

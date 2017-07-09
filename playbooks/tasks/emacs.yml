@@ -4,11 +4,14 @@
     dest: ~/.emacs.d
     force: yes
 
-- name: Install emacs with Homebrew
-  homebrew: name=emacs state=present install_options=cocoa
+- name: Update and upgrade Homebrew
+  shell: brew update && brew upgrade && brew cleanup
 
-- name: Link emacs with Homebrew
-  homebrew: name=emacs state=linked
+- name: Install emacss with Homebrew cask
+  homebrew_cask: name=emacs
+
+- name: Install cash with Homebrew
+  homebrew: name=cask
 
 - file:
     path: ~/Workspaces/emacs
