@@ -22,6 +22,7 @@
     - imagemagick
     - markdown
     - nvm
+    - packer
     - postgresql
     - pyenv
     - rbenv
@@ -57,3 +58,5 @@
     - leiningen
     - maven
 
+- name: Install Apex
+  command: curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sh
