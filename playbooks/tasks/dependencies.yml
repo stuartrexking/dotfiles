@@ -20,6 +20,7 @@
     - direnv
     - heroku
     - imagemagick
+    - lumo
     - markdown
     - nvm
     - packer
@@ -28,6 +29,7 @@
     - rbenv
     - rlwrap
     - terraform
+    - the_silver_searcher
     - tmux
     - watchman
     - wget
