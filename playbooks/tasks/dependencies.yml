@@ -1,7 +1,7 @@
 - name: Tap Homebrew repositories
   homebrew_tap: name={{ item }} state=present
   with_items:
-    - caskroom/cask
+    - homebrew/cask
     - homebrew/binary
     - homebrew/completions
     - homebrew/dupes
@@ -22,9 +22,11 @@
     - imagemagick
     - lumo
     - markdown
+    - macvim
     - nvm
     - packer
     - postgresql
+    - pipenv
     - pyenv
     - rbenv
     - rlwrap
@@ -60,5 +62,11 @@
     - leiningen
     - maven
 
-- name: Install Apex
-  command: curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sh
+- name: Download apex installer
+  get_url: url=https://raw.githubusercontent.com/apex/apex/master/install.sh dest=/tmp/apex-installer.sh mode=u+rx
+
+- name: Execute the apex-installer.sh
+  shell: /tmp/apex-installer.sh
+
+- name: Remove the apex-installer.sh
+  file: path=/tmp/apex-installer.sh state=absent
