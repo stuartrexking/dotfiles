@@ -8,6 +8,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://github.com/altercation/vim-colors-solarized.git'
 Plugin 'wincent/command-t'
+Plugin 'w0rp/ale'
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 
@@ -47,6 +56,14 @@ set softtabstop=4
 set tabstop=4
 set title
 
+
+""""""""""""""""""""""""""""""
+" REFRESH FILE
+""""""""""""""""""""""""""""""
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
 """"""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""
@@ -67,9 +84,9 @@ let maplocalleader = "\\"
 "switch to previous buffer
 nnoremap <leader><leader> <c-^>
 "edit .vimrc
-nnoremap <leader>ev :vsplit ~/.dotfiles/home/.vimrc<cr>
+nnoremap <leader>ev :vsplit ~/Workspaces/dotfiles/dotfiles/.vimrc<cr>
 "source .vimrc
-nnoremap <leader>sv :w <bar> :!cp ~/.dotfiles/home/.vimrc ~/<cr> <bar> :source $MYVIMRC<cr> <bar> :q<cr>
+nnoremap <leader>sv :w <bar> :!cp ~/Workspaces/dotfilesdotfiles/.vimrc ~/<cr> <bar> :source $MYVIMRC<cr> <bar> :q<cr>
 "surround with double quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 "surround with single quotes
@@ -96,4 +113,27 @@ augroup END
 """"""""""""""""""""""""""""""
 set wildignore+=*/node_modules/*,*/Godeps/*
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>c :CommandTCommand<cr>
 
+""""""""""""""""""""""""""""""
+"  AG / ACK
+""""""""""""""""""""""""""""""
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
+map <leader>a :Ack<Space>
+
+
+""""""""""""""""""""""""""""""
+" OPEN ALTERNATE FILE 
+""""""""""""""""""""""""""""""
+function! OpenAlternate()
+    let new_file = AlternateForCurrentFile()
+    echo new_file
+endfunction
+
+function! AlternateForCurrentFile()
+    return 'hello'
+endfunction
+nnoremap <leader>. :call OpenAlternate()<cr>

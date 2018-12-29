@@ -15,4 +15,10 @@
     email = stuartrexking@gmail.com
 
 [alias]
+    a = add -all
+    c = commit -m
+    f = fetch
+    fa = fetch --all
     lo = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    r = rebase
+    s = status
