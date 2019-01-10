@@ -1,7 +1,0 @@
-- name: Install go with homebrew
-  homebrew: name=go state=latest
-
-- name: Install go dependencies
-  shell: go get -u -v {{ item }}
-  with_items:
-    - github.com/spf13/hugo

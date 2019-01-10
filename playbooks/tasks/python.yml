@@ -1,7 +1,0 @@
-- name: upgrade pip
-  shell: pip install --upgrade pip
-  become: true
-
-- name: install virtualenv
-  shell: pip install virtualenv
-  become: true

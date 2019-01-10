@@ -1,9 +1,6 @@
-- hosts: targets
+- hosts: all
   gather_facts: False
   tasks:
     - include: tasks/dependencies.yml    
     - include: tasks/dotfiles.yml
-    - include: tasks/emacs.yml
-    - include: tasks/golang.yml
-    - include: tasks/python.yml
-    - include: tasks/vcprompt.yml
+    - include: tasks/vim.yml

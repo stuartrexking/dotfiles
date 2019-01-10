@@ -1,73 +1,63 @@
-- name: Tap Homebrew repositories
-  homebrew_tap: name={{ item }} state=present
-  with_items:
-    - homebrew/cask
-    - homebrew/binary
-    - homebrew/completions
-    - homebrew/dupes
-    - homebrew/versions
-
 - name: Update and upgrade Homebrew
   shell: brew update && brew upgrade && brew cleanup
 
+- name: Install Java with Homebrew cask
+  homebrew_cask:
+    name: java
+
+- name: Install pip
+  easy_install:
+    name: pip
+    state: latest
+  become: yes
+
 - name: Install libraries with Homebrew
-  homebrew: name={{ item }} state=latest
-  with_items:
-    - awscli
-    - awsebcli
-    - bash-completion
-    - boot-clj
-    - direnv
-    - heroku
-    - imagemagick
-    - lumo
-    - markdown
-    - macvim
-    - nvm
-    - packer
-    - postgresql
-    - pipenv
-    - pyenv
-    - rbenv
-    - rlwrap
-    - terraform
-    - the_silver_searcher
-    - tmux
-    - watchman
-    - wget
-    - yarn
+  homebrew:
+    state: latest
+    name:
+      - awscli
+      - awsebcli
+      - bash-completion
+      - boot-clj
+      - direnv
+      - heroku/brew/heroku
+      - flyway
+      - go
+      - imagemagick
+      - leiningen
+      - lumo
+      - markdown
+      - macvim
+      - maven
+      - nvm
+      - packer
+      - postgresql
+      - pipenv
+      - pyenv
+      - rbenv
+      - rlwrap
+      - terraform
+      - the_silver_searcher
+      - tmux
+      - vcprompt
+      - watchman
+      - wget
+      - yarn
     
 - name: Install openssh with Homebrew
   homebrew: name=openssh state=latest install_options=with-keychain-support
 
-- name: Install libraries with Homebrew cask
-  homebrew_cask: name={{ item }}
+- name: Install libraries with Homebrew Cask
+  homebrew_cask: name={{ item }} state=present
   with_items:
    - android-studio
    - google-chrome
-   - java
    - intellij-idea
    - ngrok
    - pycharm
    - skype
+   - slack
    - spotify
-   - transmission
    - vagrant
    - virtualbox
    - vlc
-   
-- name: Install Java libs
-  homebrew: name={{ item }} state=latest
-  with_items:
-    - flyway
-    - leiningen
-    - maven
-
-- name: Download apex installer
-  get_url: url=https://raw.githubusercontent.com/apex/apex/master/install.sh dest=/tmp/apex-installer.sh mode=u+rx
-
-- name: Execute the apex-installer.sh
-  shell: /tmp/apex-installer.sh
-
-- name: Remove the apex-installer.sh
-  file: path=/tmp/apex-installer.sh state=absent

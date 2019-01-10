@@ -1,10 +1,6 @@
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/.rbenv/bin:$PATH
-export PATH=$HOME/bin:$PATH
-export PATH="/Users/stuartrexking/anaconda/bin:$PATH"
 
-export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH
-export CUDA_ROOT=/usr/local/cuda
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 

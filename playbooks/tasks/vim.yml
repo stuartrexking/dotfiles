@@ -1,10 +1,11 @@
----
 - name: Make autoload directory
-    file: path=~/.vim/autoload state=directory
+  file: path=~/.vim/autoload state=directory
 
 - name: Make bundle directory
-    file: path=~/.vim/bundle state=directory
+  file: path=~/.vim/bundle state=directory
 
 - name: Get Vundle
-  get_url: url=https://github.com/VundleVim/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
+  git:
+    repo: https://github.com/VundleVim/Vundle.vim.git
+    dest: ~/.vim/bundle/Vundle.vim
 

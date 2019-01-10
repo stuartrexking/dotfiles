@@ -1,2 +1,2 @@
 run:
-	ansible-playbook -v -D -i inventory --ask-sudo-pass playbooks/run.yml
+	ansible-playbook -v -D --ask-become-pass --connection=local --inventory 127.0.0.1, playbooks/run.yml
