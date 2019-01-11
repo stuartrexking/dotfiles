@@ -3,7 +3,7 @@
 
 - name: Install Java with Homebrew cask
   homebrew_cask:
-    name: java
+    name: java8
 
 - name: Install pip
   easy_install:
@@ -54,6 +54,7 @@
    - google-chrome
    - intellij-idea
    - ngrok
+   - phantomjs
    - pycharm
    - skype
    - slack
