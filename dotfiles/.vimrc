@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://github.com/altercation/vim-colors-solarized.git'
 Plugin 'wincent/command-t'
 Plugin 'w0rp/ale'
+Plugin 'jvirtanen/vim-octave.git'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'

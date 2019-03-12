@@ -23,13 +23,14 @@
       - heroku/brew/heroku
       - flyway
       - go
+      - hugo
       - imagemagick
       - leiningen
       - lumo
       - markdown
       - macvim
       - maven
-      - nvm
+      - openssh
       - packer
       - postgresql
       - pipenv
@@ -43,13 +44,11 @@
       - watchman
       - wget
       - yarn
-    
-- name: Install openssh with Homebrew
-  homebrew: name=openssh state=latest install_options=with-keychain-support
 
 - name: Install libraries with Homebrew Cask
   homebrew_cask: name={{ item }} state=present
   with_items:
+   - aerial
    - android-studio
    - google-chrome
    - intellij-idea
@@ -62,3 +61,14 @@
    - vagrant
    - virtualbox
    - vlc
+
+- name: Creates .nvm directory
+  file:
+    path: ~/.nvm
+    state: directory
+
+- name: nvm
+  shell: >
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+  args:
+    creates: "~/.nvm/nvm.sh"
