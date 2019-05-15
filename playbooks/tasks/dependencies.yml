@@ -11,6 +11,14 @@
     state: latest
   become: yes
 
+- name: Tap emacs-plus
+  homebrew_tap:
+    name: d12frosted/emacs-plus
+
+- name: Tap fonts
+  homebrew_tap:
+    name: homebrew/cask-fonts
+
 - name: Install libraries with Homebrew
   homebrew:
     state: latest
@@ -20,6 +28,7 @@
       - bash-completion
       - boot-clj
       - direnv
+      - emacs-plus
       - heroku/brew/heroku
       - flyway
       - go
@@ -45,11 +54,17 @@
       - wget
       - yarn
 
+- name: Source Code Pro Font
+  homebrew_cask:
+    name: font-source-code-pro
+  become: yes
+
 - name: Install libraries with Homebrew Cask
   homebrew_cask: name={{ item }} state=present
   with_items:
    - aerial
    - android-studio
+   - font-source-code-pro
    - google-chrome
    - intellij-idea
    - ngrok
