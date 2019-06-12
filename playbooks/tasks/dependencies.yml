@@ -19,6 +19,10 @@
   homebrew_tap:
     name: homebrew/cask-fonts
 
+- name: Tap dart
+  homebrew_tap:
+    name: dart-lang/dart
+
 - name: Install libraries with Homebrew
   homebrew:
     state: latest
@@ -27,6 +31,7 @@
       - awsebcli
       - bash-completion
       - boot-clj
+      - dart
       - direnv
       - emacs-plus
       - heroku/brew/heroku
@@ -57,7 +62,6 @@
 - name: Source Code Pro Font
   homebrew_cask:
     name: font-source-code-pro
-  become: yes
 
 - name: Install libraries with Homebrew Cask
   homebrew_cask: name={{ item }} state=present
