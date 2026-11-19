@@ -1,6 +1,0 @@
-- hosts: all
-  gather_facts: False
-  tasks:
-    - include: tasks/dependencies.yml    
-    - include: tasks/dotfiles.yml
-    - include: tasks/vim.yml

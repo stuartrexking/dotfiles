@@ -1,3 +1,0 @@
-- name: Synchronize dotfiles
-  synchronize: src=~../../dotfiles/ dest=~
-
