@@ -1,0 +1,3 @@
+# Personal Codex settings. The installer seeds only a missing config.toml.
+# Uncomment locally to hide reasoning events in the CLI.
+# hide_agent_reasoning = true
